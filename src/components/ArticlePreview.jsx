@@ -10,13 +10,16 @@ import { ReactComponent as Twitter } from "../assets/icon-twitter.svg";
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 0;
   background: antiquewhite;
 
   font-family: "Manrope";
   font-style: normal;
+  box-sizing: border-box;
 `;
 
 const FlexContainer = styled.div`
@@ -37,8 +40,9 @@ const FlexContainer = styled.div`
 
 const ImageFlex = styled.div`
   height: 100%;
+
   width: max-content;
-  flex: 1.2;
+  flex: 1.5;
   overflow: hidden;
   border-radius: 10px 0 0 10px;
 
@@ -51,14 +55,11 @@ const ImageFlex = styled.div`
   img {
     height: 100%;
     overflow: hidden;
-
-    @media screen and (max-width: 480px) {
-      width: 100%;
-    }
+    width: 100%;
   }
 `;
 
-const ContentFlex = styled.div`
+const ContentFlex = styled.article`
   padding: 2rem 2.5rem;
   text-align: left;
   flex: 2;
@@ -232,6 +233,10 @@ const Tooltip = styled.div`
   }
 `;
 
+const Attribution = styled.footer`
+  padding-top: 2rem;
+`;
+
 const SocialContainer = styled.div`
   display: flex;
   align-items: center;
@@ -286,6 +291,25 @@ const ArticlePreview = () => {
           </AvatarContainer>
         </ContentFlex>
       </FlexContainer>
+      <Attribution>
+        Challenge by{" "}
+        <a
+          href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by{" "}
+        <a
+          href="https://www.frontendmentor.io/profile/yogeshdatir"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Yogesh D
+        </a>
+        .
+      </Attribution>
     </Container>
   );
 };
