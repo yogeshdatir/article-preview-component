@@ -73,7 +73,7 @@ const ContentFlex = styled.article`
   }
 `;
 
-const Header = styled.p`
+const Header = styled.h1`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
